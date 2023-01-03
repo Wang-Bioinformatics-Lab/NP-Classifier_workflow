@@ -1,1 +1,5 @@
 pandas
+glob
+requests
+tqdm
+plotly

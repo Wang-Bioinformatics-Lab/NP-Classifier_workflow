@@ -1,6 +1,6 @@
-workflowname: template_nextflow_workflow
-workflowdescription: template_nextflow_workflow
-workflowlongdescription: This is a template nextflow workflow for GNPS2
+workflowname: NP-Classifier_nextflow_workflow
+workflowdescription: NP-Classifier_nextflow_workflow
+workflowlongdescription: This is the workflow to run NP-Classifier from nextflow. The input of NP-Classifier is a set of chemical structures defined by their SMILEs and the output is the classificiation of them. 
 workflowversion: "0.1"
 workflowfile: nf_workflow.nf
 workflowautohide: false
@@ -12,10 +12,10 @@ parameterlist:
 
     - displayname: Input Data Folder
       paramtype: fileselector
-      nf_paramname: input_spectra_folder
+      nf_paramname: input_SMILES_folder
       formplaceholder: Enter the path to data
       formvalue: ""
-      targettaskfolder: input_spectra
+      targettaskfolder: input_SMILES
       optional: false
       selectsinglefile: false
       folderunroll: true

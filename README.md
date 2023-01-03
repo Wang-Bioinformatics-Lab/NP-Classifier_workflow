@@ -1,26 +1,32 @@
-# Nextflow Template
+# NP-Classifier Nextflow
 
-To run the workflow to test simply do
+To test the workflow simply do
 
 ```
-make run
+make run [-e input_file=<input_file>]
 ```
+
+If you do not specify an input file, by default it will take the sample file located in data/test_input.tsv
 
 To learn NextFlow checkout this documentation:
 
 https://www.nextflow.io/docs/latest/index.html
 
-## Deployment to GNPS2
+## Parameters in nextflow 
 
-In order to deploy, we have a set of deployment tools that will enable deployment to the various gnps systems. To run the deployment, use the following commands from the deploy_gnps2 folder. 
+The parameters in nextflow follow the next priority:
+
+i. Parameters specified on the command line (--something value)
+ii. Parameters provided using the -params-file option
+iii. Config file specified using the -c my_config option
+iv. The config file named nextflow.config in the current directory
+v. The config file named nextflow.config in the workflow project directory
+vi. The config file $HOME/.nextflow/config
+vii. Values defined within the pipeline script itself (e.g. main.nf)
+
+In case you wish to set your parameters directly in nextflow, please use the next syntaxis:
+
 
 ```
-make deploy-prod
-```
-
-You might need to checkout the module, do this by running
-
-```
-git submodule init
-git submodule update
+nextflow [options] ./nf_workflow.nf [--input="$(input_file)"] [additional args...]
 ```

@@ -1,6 +1,8 @@
-#!/usr/bin/env nextflow
+nextflow.enable.dsl=2
 
-params.input = "README.md"
+params.input = "data/test_input.tsv"
+params.publishdir = "./nf_output"
+
 
 // Workflow Boiler Plate
 params.OMETALINKING_YAML = "flow_filelinking.yaml"
@@ -8,18 +10,35 @@ params.OMETAPARAM_YAML = "job_parameters.yaml"
 
 TOOL_FOLDER = "$baseDir/bin"
 
-process processData {
-    publishDir "./nf_output", mode: 'copy'
-
-    conda "$TOOL_FOLDER/conda_env.yml"
+process classifyMolecules {
+    publishDir "$params.publishdir", mode: 'copy', overwrite: false
 
     input:
-    file input from Channel.fromPath(params.input)
+    path query
+    
 
     output:
-    file 'output.tsv' into records_ch
+    path "output.tsv"
 
     """
-    python $TOOL_FOLDER/script.py $input output.tsv
+    python $TOOL_FOLDER/npclassify.py $query output.tsv
     """
+}
+
+process drawResults {
+    publishDir "$params.publishdir", mode: 'copy', overwrite: false
+
+    input:
+    path query
+
+    output:
+    path "drawing.html"
+
+    """
+    python $TOOL_FOLDER/drawclassification.py $query drawing.html
+    """
+}
+
+workflow{
+    Channel.fromPath(params.input) | classifyMolecules | drawResults
 }

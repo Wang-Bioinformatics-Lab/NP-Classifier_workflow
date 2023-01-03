@@ -4,6 +4,10 @@ channels:
 dependencies:
   - python=3.8.8
   - pandas
+  - tqdm
+  - plotly
   - pip:
-    - xmltodict
     - requests
+    - os
+    - glob
+    - sys

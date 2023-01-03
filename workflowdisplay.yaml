@@ -1,16 +1,16 @@
-name: template_nextflow_workflow
-displayname: STUFF
+name: NP-Classifier_nextflow_workflow
+displayname: NP-Classifier
 Views:
 -   name: Summary List
     displayname: Summary List
     viewname: summarylist
     displaytype: datatable
     parameters:
-        filename: output/summary.tsv
+        filename: output/results.tsv
         columns:
-            -   title: "View LCMS"
+            -   title: "Class"
                 data: filename
-            -   title: "filename"
+            -   title: "Superclass"
                 data: filename
         columnDefs: '[ {"targets": 0,"data": null,"render": function ( data, type, row, meta ) {
             return `
