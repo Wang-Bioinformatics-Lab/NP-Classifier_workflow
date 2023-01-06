@@ -1,5 +1,8 @@
 input_file=data/test_input.tsv
 
+clean:
+	rm -Rf .nextflow* work bin/__pycache__
+
 run:
 	nextflow run ./nf_workflow.nf --input="$(input_file)" --resume 
 

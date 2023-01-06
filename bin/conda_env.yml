@@ -6,7 +6,4 @@ dependencies:
   - python>=3.8.8
   - pip >= 22.3.1
   - pip:
-    - requests
-    - pandas
-    - tqdm
-    - plotly
+    - -r ../requirements.txt
