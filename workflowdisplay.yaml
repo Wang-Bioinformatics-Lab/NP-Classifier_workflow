@@ -9,11 +9,11 @@ Views:
         filename: output/results.tsv
         columns:
             -   title: "Class"
-                data: filename
+                data: class
             -   title: "Superclass"
-                data: filename
+                data: superclass
         columnDefs: '[ {"targets": 0,"data": null,"render": function ( data, type, row, meta ) {
             return `
-            <a target="_blank" href="/dashboards/lcms?usi=mzspec:GNPS2-${task}:${encodeURIComponent(row["filename"])}">View LCMS - mzspec:GNPS2-${task}:${row["filename"]}</a>
+            <a target="_blank" href="/dashboards/lcms?usi=mzspec:GNPS2-${task}:${encodeURIComponent(row["Class"])}">View LCMS - mzspec:GNPS2-${task}:${row["filename"]}</a>
             `;}}]'
             
