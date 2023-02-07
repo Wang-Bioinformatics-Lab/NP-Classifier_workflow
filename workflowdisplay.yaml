@@ -1,4 +1,4 @@
-name: NP-Classifier_nextflow_workflow
+name: NP_Classifier_nextflow_workflow
 displayname: NP-Classifier
 Views:
 -   name: Summary List
@@ -6,14 +6,13 @@ Views:
     viewname: summarylist
     displaytype: datatable
     parameters:
-        filename: output/results.tsv
+        filename: nf_output/output.tsv
         columns:
             -   title: "Class"
-                data: class
+                data: class_results
             -   title: "Superclass"
-                data: superclass
-        columnDefs: '[ {"targets": 0,"data": null,"render": function ( data, type, row, meta ) {
-            return `
-            <a target="_blank" href="/dashboards/lcms?usi=mzspec:GNPS2-${task}:${encodeURIComponent(row["Class"])}">View LCMS - mzspec:GNPS2-${task}:${row["filename"]}</a>
-            `;}}]'
-            
+                data: superclass_results
+            -   title: "Pathway"
+                data: pathway_results
+            -   title: "smiles"
+                data: smiles

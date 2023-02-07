@@ -8,12 +8,13 @@ import pandas as pd
 input_filename = sys.argv[1]
 output_filename = sys.argv[2]
 
-
 split_tup = os.path.splitext(input_filename)
 
 # extract the file name and extension
 file_name = split_tup[0]
 file_extension = split_tup[1]
+
+print(file_extension)
 
 if file_extension == '.tsv':
     df = pd.read_csv(input_filename, sep="\t")
@@ -38,7 +39,7 @@ if "SMILES" in df:
 all_results = []
 for smiles in tqdm(all_smiles):
     try:
-        url = "https://npclassifier.ucsd.edu/classify"
+        url = "https://npclassifier.gnps2.org/classify"
 
         r = requests.get(url, params={"smiles": smiles})
 

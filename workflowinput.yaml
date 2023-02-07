@@ -1,5 +1,5 @@
-workflowname: NP-Classifier_nextflow_workflow
-workflowdescription: NP-Classifier_nextflow_workflow
+workflowname: NP_Classifier_nextflow_workflow
+workflowdescription: NP_Classifier_nextflow_workflow
 workflowlongdescription: This is the workflow to run NP-Classifier from nextflow. The input of NP-Classifier is a set of chemical structures defined by their SMILEs and the output is the classificiation of them. 
 workflowversion: "0.1"
 workflowfile: nf_workflow.nf
@@ -12,10 +12,10 @@ parameterlist:
 
     - displayname: Input Data Folder
       paramtype: fileselector
-      nf_paramname: input_SMILES_folder
+      nf_paramname: input
       formplaceholder: Enter the path to data
       formvalue: ""
-      targettaskfolder: input_SMILES
+      targettaskfolder: input
       optional: false
-      selectsinglefile: false
+      selectsinglefile: true
       folderunroll: true
