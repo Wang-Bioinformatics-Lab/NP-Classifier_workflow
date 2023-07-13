@@ -8,11 +8,15 @@ Views:
     parameters:
         filename: nf_output/output.tsv
         columns:
+            -   title: "smiles"
+                data: smiles
             -   title: "Class"
                 data: class_results
             -   title: "Superclass"
                 data: superclass_results
             -   title: "Pathway"
                 data: pathway_results
-            -   title: "smiles"
-                data: smiles
+            -   title: "Is a Glycoside"
+                data: isglycoside
+                
+            

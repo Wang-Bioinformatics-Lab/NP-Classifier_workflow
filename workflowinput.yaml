@@ -13,9 +13,11 @@ parameterlist:
     - displayname: Input Data Folder
       paramtype: fileselector
       nf_paramname: input
-      formplaceholder: Enter the path to data
+      formplaceholder: Enter the CSV file containing SMILES
       formvalue: ""
       targettaskfolder: input
       optional: false
       selectsinglefile: true
       folderunroll: true
+
+      
