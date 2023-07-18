@@ -48,4 +48,4 @@ nextflow [options] ./nf_workflow.nf [--input="$(input_file)"] [additional args..
 
 ## Deployment in GNPS2
 
-Check [https://github.com/Wang-Bioinformatics-Lab/Nextflow_Workflow_Template](Nexftlow template instructions from Mingxun Wang)
+Check [Nexftlow template instructions from Mingxun Wang](https://github.com/Wang-Bioinformatics-Lab/Nextflow_Workflow_Template)
