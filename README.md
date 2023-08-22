@@ -8,6 +8,8 @@ make run [-e input_file=<input_file>]
 
 If you do not specify an input file, by default it will take the sample file located in [data/test_input.tsv](data/test_input.tsv)
 
+Please visit the [GNPS documentation](https://ccms-ucsd.github.io/GNPSDocumentation/toolindex/) for more information about NP-Classifier.
+
 To learn NextFlow checkout this documentation:
 
 https://www.nextflow.io/docs/latest/index.html
