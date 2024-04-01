@@ -8,6 +8,8 @@ make run [-e input_file=<input_file>]
 
 If you do not specify an input file, by default it will take the sample file located in [data/test_input.tsv](data/test_input.tsv)
 
+Please visit the [GNPS documentation](https://ccms-ucsd.github.io/GNPSDocumentation/toolindex/) for more information about NP-Classifier.
+
 To learn NextFlow checkout this documentation:
 
 https://www.nextflow.io/docs/latest/index.html
@@ -45,3 +47,7 @@ and then the workflow can be executed from the conda environment. If you do not 
 ```
 nextflow [options] ./nf_workflow.nf [--input="$(input_file)"] [additional args...]
 ```
+
+## Deployment in GNPS2
+
+Check [Nexftlow template instructions from Mingxun Wang](https://github.com/Wang-Bioinformatics-Lab/Nextflow_Workflow_Template)

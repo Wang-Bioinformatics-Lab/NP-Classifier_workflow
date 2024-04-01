@@ -1,6 +1,6 @@
 workflowname: NP_Classifier_nextflow_workflow
 workflowdescription: NP_Classifier_nextflow_workflow
-workflowlongdescription: This is the workflow to run NP-Classifier from nextflow. The input of NP-Classifier is a set of chemical structures defined by their SMILEs and the output is the classificiation of them. 
+workflowlongdescription: This is the workflow to run NP-Classifier from nextflow. The input of NP-Classifier is a set of chemical structures defined by their SMILEs and the output is the classificiation of them. Please visit the GNPS documentation at https://ccms-ucsd.github.io/GNPSDocumentation/toolindex/) for more information.
 workflowversion: "0.1"
 workflowfile: nf_workflow.nf
 workflowautohide: false
@@ -13,9 +13,11 @@ parameterlist:
     - displayname: Input Data Folder
       paramtype: fileselector
       nf_paramname: input
-      formplaceholder: Enter the path to data
+      formplaceholder: Enter the CSV file containing SMILES
       formvalue: ""
       targettaskfolder: input
       optional: false
       selectsinglefile: true
       folderunroll: true
+
+      

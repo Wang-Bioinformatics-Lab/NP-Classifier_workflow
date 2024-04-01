@@ -12,7 +12,7 @@ TOOL_FOLDER = "$baseDir/bin"
 
 process classifyMolecules {
     publishDir "$params.publishdir", mode: 'copy', overwrite: false
-
+    conda "$TOOL_FOLDER/conda_env.yml"
     input:
     path query
     
@@ -27,15 +27,15 @@ process classifyMolecules {
 
 process drawResults {
     publishDir "$params.publishdir", mode: 'copy', overwrite: false
-
+    conda "$TOOL_FOLDER/conda_env.yml"
     input:
-    path query
+    path classifiedMolecules
 
     output:
     path "drawing.html"
 
     """
-    python $TOOL_FOLDER/drawclassification.py $query drawing.html
+    python $TOOL_FOLDER/drawclassification.py $classifiedMolecules drawing.html
     """
 }
 

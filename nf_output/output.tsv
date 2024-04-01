@@ -1,5 +1,0 @@
-smiles	class_results	superclass_results	pathway_results	isglycoside
-CCCCC=CC	Hydrocarbons	Fatty acyls	Fatty acids	False
-CCCC	Hydrocarbons	Fatty acyls	Fatty acids	False
-CCCCCCC	Hydrocarbons	Fatty acyls	Fatty acids	False
-CC1C(O)CC2C1C(OC1OC(COC(C)=O)C(O)C(O)C1O)OC=C2C(O)=O	Iridoids monoterpenoids	Monoterpenoids	Terpenoids	True
