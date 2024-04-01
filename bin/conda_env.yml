@@ -9,3 +9,4 @@ dependencies:
     - requests
     - tqdm
     - plotly
+    - openpyxl
