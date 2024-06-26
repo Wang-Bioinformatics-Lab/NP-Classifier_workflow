@@ -1,1 +1,5 @@
-jupyter/requirements.txt
+pandas
+requests
+tqdm
+plotly
+openpyxl
